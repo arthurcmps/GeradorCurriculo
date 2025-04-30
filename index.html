@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gerador de Currículo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Gerador de Currículo</h1>
+    <form id="form-curriculo">
+      <input type="text" placeholder="Nome Completo" id="nome" required />
+      <input type="email" placeholder="E-mail" id="email" required />
+      <input type="text" placeholder="Telefone" id="telefone" required />
+      <textarea placeholder="Objetivo Profissional" id="objetivo" required></textarea>
+      <textarea placeholder="Formação Acadêmica" id="formacao" required></textarea>
+      <textarea placeholder="Experiências Profissionais" id="experiencias" required></textarea>
+      <textarea placeholder="Cursos e Certificações" id="cursos" required></textarea>
+      <textarea placeholder="Habilidades e Competências" id="habilidades" required></textarea>
+      <button type="submit">Gerar Currículo</button>
+    </form>
+
+    <div id="curriculo-gerado" style="display:none;">
+      <div id="modelo-curriculo">
+        <!-- Currículo preenchido será exibido aqui -->
+      </div>
+      <button onclick="gerarPDF()">Baixar PDF</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</body>
+</html>
