@@ -32,6 +32,13 @@ document.getElementById('form-curriculo').addEventListener('submit', function(ev
   
   function gerarPDF() {
     const elemento = document.getElementById('modelo-curriculo');
-    html2pdf().from(elemento).save('curriculo.pdf');
+  
+    // Garante que o elemento está visível
+    document.getElementById('curriculo-gerado').style.display = 'block';
+  
+    // Dá tempo para o navegador "enxergar" tudo
+    setTimeout(() => {
+      html2pdf().from(elemento).save('curriculo.pdf');
+    }, 100);
   }
   
